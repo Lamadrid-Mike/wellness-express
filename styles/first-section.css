@@ -1,0 +1,20 @@
+.first-section img {
+  max-width: 50vh;
+  height: auto;
+}
+.first-section__btn {
+  padding: 1.2rem 1.8rem;
+  font-size: 1.7rem;
+  color: white;
+  font-family: inherit;
+  border: none;
+  background-color: rgba(107, 66, 125, 0.925);
+  margin: 2rem;
+  border-radius: 5px;
+  transition: all 0.2s;
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.75);
+}
+.first-section__btn:active {
+  transform: translateY(5px);
+  box-shadow: none;
+}/*# sourceMappingURL=first-section.css.map */

@@ -1,0 +1,13 @@
+.contact-section {
+  &__content {
+    img {
+      height: auto;
+      width: 50rem;
+      margin: 2rem;
+    }
+  }
+
+  &__content--address {
+    display: inline-block;
+  }
+}
