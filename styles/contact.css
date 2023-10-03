@@ -1,7 +1,16 @@
-.contact-section__content img {
-  height: auto;
-  width: 50rem;
+.contact-section__content {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
   margin: 2rem;
+  background-color: whitesmoke;
+}
+.contact-section__content img {
+  width: 100%;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
 }
 .contact-section__address p {
   display: inline-block;

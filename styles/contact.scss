@@ -1,9 +1,16 @@
 .contact-section {
   &__content {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    margin: 2rem;
+    background-color: whitesmoke;
     img {
-      height: auto;
-      width: 50rem;
-      margin: 2rem;
+      width: 100%;
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
     }
   }
 
