@@ -1,5 +1,6 @@
 .contact-section {
   &__content {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     display: flex;
     gap: 2rem;
     flex-direction: column;
@@ -7,7 +8,7 @@
     border-radius: 10px;
     margin: 2rem;
     background-color: whitesmoke;
-    img {
+    .contact-section__map {
       width: 100%;
       border-top-right-radius: 10px;
       border-top-left-radius: 10px;
@@ -15,8 +16,15 @@
   }
 
   &__address {
-    p {
-      display: inline-block;
+    margin: 1rem;
+    padding: 1rem;
+    .address__section-content {
+      margin: 1rem;
+
+      a {
+        text-decoration: none;
+        color: black;
+      }
     }
   }
 }
