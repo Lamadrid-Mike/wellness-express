@@ -185,6 +185,10 @@ body {
   filter: invert(100%) sepia(94%) saturate(0%) hue-rotate(190deg) brightness(105%) contrast(107%);
 }
 
+.contact-section__header {
+  color: rgba(107, 66, 125, 0.925);
+  text-align: center;
+}
 .contact-section__content {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   display: flex;
