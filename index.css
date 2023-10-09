@@ -192,21 +192,16 @@ body {
 .contact-section__content {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   display: flex;
-  gap: 2rem;
+  background-color: whitesmoke;
   flex-direction: column;
   align-items: center;
   border-radius: 10px;
   margin: 2rem;
-  background-color: whitesmoke;
 }
 .contact-section__content .contact-section__map {
   width: 100%;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
-}
-.contact-section__address {
-  margin: 1rem;
-  padding: 1rem;
 }
 .contact-section__address .address__section-content {
   margin: 1rem;

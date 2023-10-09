@@ -1,18 +1,18 @@
 .contact-section {
   &__header {
-    color: $text-color;
+    color: rgba(107, 66, 125, 0.925);
     text-align: center;
   }
 
   &__content {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     display: flex;
-    gap: 2rem;
+    background-color: whitesmoke;
     flex-direction: column;
     align-items: center;
     border-radius: 10px;
     margin: 2rem;
-    background-color: whitesmoke;
+
     .contact-section__map {
       width: 100%;
       border-top-right-radius: 10px;
@@ -21,8 +21,6 @@
   }
 
   &__address {
-    margin: 1rem;
-    padding: 1rem;
     .address__section-content {
       margin: 1rem;
       a {
