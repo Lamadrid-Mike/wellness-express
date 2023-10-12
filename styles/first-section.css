@@ -1,5 +1,6 @@
 .first-section img {
-  max-width: 75%;
+  max-width: 100%;
+  margin-bottom: 10rem;
 }
 .first-section__btn {
   padding: 1.2rem 1.8rem;

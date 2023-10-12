@@ -22,6 +22,10 @@
 
   &__address {
     .address__section-content {
+      img {
+        filter: invert(30%) sepia(14%) saturate(2032%) hue-rotate(237deg)
+          brightness(92%) contrast(88%);
+      }
       margin: 1rem;
       a {
         text-decoration: none;

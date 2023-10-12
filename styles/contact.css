@@ -19,6 +19,9 @@
 .contact-section__address .address__section-content {
   margin: 1rem;
 }
+.contact-section__address .address__section-content img {
+  filter: invert(30%) sepia(14%) saturate(2032%) hue-rotate(237deg) brightness(92%) contrast(88%);
+}
 .contact-section__address .address__section-content a {
   text-decoration: none;
   color: black;

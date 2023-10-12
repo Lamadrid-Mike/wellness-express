@@ -56,6 +56,7 @@ body {
 .first-section__header {
   margin-top: 2rem;
   text-align: center;
+  margin-bottom: 5rem;
 }
 
 .text-main-color {
@@ -113,7 +114,8 @@ body {
 }
 
 .first-section img {
-  max-width: 75%;
+  max-width: 100%;
+  margin-bottom: 10rem;
 }
 .first-section__btn {
   padding: 1.2rem 1.8rem;
@@ -205,6 +207,9 @@ body {
 }
 .contact-section__address .address__section-content {
   margin: 1rem;
+}
+.contact-section__address .address__section-content img {
+  filter: invert(30%) sepia(14%) saturate(2032%) hue-rotate(237deg) brightness(92%) contrast(88%);
 }
 .contact-section__address .address__section-content a {
   text-decoration: none;
