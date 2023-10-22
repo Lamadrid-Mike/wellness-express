@@ -21,22 +21,33 @@
 
   .form {
     display: grid;
-    grid-template-columns: 1;
     grid-template-rows: 20% 20% 60%;
     gap: 0.5rem;
     align-items: center;
     justify-items: center;
 
     input {
+      background-color: inherit;
       width: 30rem;
       height: 5rem;
       border: none;
-      border-bottom: 1px solid rgba(107, 66, 125, 0.925);
+      border-bottom: 1px solid grey;
+      font-family: inherit;
+      &:focus {
+        outline: none;
+        background-color: inherit;
+      }
     }
 
     textarea {
       border: none;
-      border-bottom: 1px solid rgba(107, 66, 125, 0.925);
+      border-bottom: 1px solid grey;
+      background-color: inherit;
+      font-family: inherit;
+      &:focus {
+        outline: none;
+        background-color: inherit;
+      }
     }
   }
 }
