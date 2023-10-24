@@ -3,6 +3,7 @@ let mobileNavbar = document.querySelector(".navigation");
 let closeBtnMobile = document.querySelector(".navigation__close--btn");
 let htmlBody = document.querySelector("body").children;
 
+//Hamburger mobile menu effect!
 let anchorLinks = Array.from(
   document.querySelectorAll(".navigation__overlay--content a")
 );
@@ -20,6 +21,7 @@ mobileBtn.addEventListener("click", function () {
   }
 });
 
+//Lazy loading effect!
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((el) => {
     const isIntersecting = el.isIntersecting;

@@ -26,7 +26,7 @@
     align-items: center;
     justify-items: center;
 
-    input {
+    input:not(:last-child) {
       background-color: inherit;
       width: 30rem;
       height: 5rem;
@@ -38,6 +38,14 @@
         outline: none;
         background-color: inherit;
       }
+    }
+
+    :last-child {
+      font-family: inherit;
+      padding: 1rem 2.5rem;
+      border: 2px solid rgba(107, 66, 125, 0.925);
+      border-radius: 10px;
+      background-color: inherit;
     }
 
     textarea {

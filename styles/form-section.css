@@ -22,7 +22,7 @@
   align-items: center;
   justify-items: center;
 }
-.form-section .form input {
+.form-section .form input:not(:last-child) {
   background-color: inherit;
   width: 30rem;
   height: 5rem;
@@ -31,8 +31,15 @@
   font-family: inherit;
   outline: none;
 }
-.form-section .form input:focus {
+.form-section .form input:not(:last-child):focus {
   outline: none;
+  background-color: inherit;
+}
+.form-section .form :last-child {
+  font-family: inherit;
+  padding: 1rem 2.5rem;
+  border: 2px solid rgba(107, 66, 125, 0.925);
+  border-radius: 10px;
   background-color: inherit;
 }
 .form-section .form textarea {
