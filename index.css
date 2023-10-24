@@ -222,7 +222,7 @@ body {
 }
 .form-section .form__img img {
   max-width: 100%;
-  margin-bottom: -3rem;
+  margin-bottom: -1rem;
 }
 .form-section .form__img h2 {
   text-transform: uppercase;
@@ -247,6 +247,7 @@ body {
   border: none;
   border-bottom: 1px solid grey;
   font-family: inherit;
+  outline: none;
 }
 .form-section .form input:focus {
   outline: none;
@@ -261,4 +262,13 @@ body {
 .form-section .form textarea:focus {
   outline: none;
   background-color: inherit;
+}
+
+.opacity-smooth-effect-off {
+  opacity: 0;
+  transition: 2s;
+}
+
+.opacity-smooth-effect-on {
+  opacity: 1;
 }/*# sourceMappingURL=index.css.map */

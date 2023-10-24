@@ -1,7 +1,7 @@
 let mobileBtn = document.querySelector(".open__mobile--navigation");
 let mobileNavbar = document.querySelector(".navigation");
 let closeBtnMobile = document.querySelector(".navigation__close--btn");
-let htmlBody = document.querySelector("body");
+let htmlBody = document.querySelector("body").children;
 
 let anchorLinks = Array.from(
   document.querySelectorAll(".navigation__overlay--content a")
@@ -21,7 +21,16 @@ mobileBtn.addEventListener("click", function () {
 });
 
 const observer = new IntersectionObserver((entries) => {
-  console.log(entries[0]);
+  entries.forEach((el) => {
+    const isIntersecting = el.isIntersecting;
+    isIntersecting
+      ? el.target.classList.add("opacity-smooth-effect-on")
+      : el.target.classList.add("opacity-smooth-effect-off");
+  });
 });
 
-observer.observe(htmlBody);
+for (let i = 1; i < htmlBody.length - 1; i++) {
+  const element = htmlBody[i];
+  observer.observe(element);
+  console.log(element);
+}
