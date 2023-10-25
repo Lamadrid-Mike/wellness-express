@@ -1,7 +1,7 @@
 .first-section {
   img {
     max-width: 100%;
-    margin-bottom: 10rem;
+    margin-bottom: 6rem;
   }
 
   &__btn {
@@ -12,7 +12,7 @@
     border: none;
     background-color: rgba(107, 66, 125, 0.925);
     margin: 2rem;
-    border-radius: 5px;
+    border-radius: 30px;
     transition: all 0.2s;
     box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.75);
     &:active {

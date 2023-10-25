@@ -34,18 +34,21 @@
       border-bottom: 1px solid grey;
       font-family: inherit;
       outline: none;
-      &:focus {
+      & ::selection {
         outline: none;
         background-color: inherit;
       }
     }
 
+    //send btn
     :last-child {
+      color: white;
+      font-size: medium;
       font-family: inherit;
-      padding: 1rem 2.5rem;
-      border: 2px solid rgba(107, 66, 125, 0.925);
-      border-radius: 10px;
-      background-color: inherit;
+      padding: 1rem 3rem;
+      background-color: rgba(107, 66, 125, 0.925);
+      border-radius: 30px;
+      border: none;
     }
 
     textarea {
