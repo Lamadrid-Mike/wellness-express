@@ -1,3 +1,6 @@
+.testimonial-section {
+  margin: 1rem;
+}
 .testimonial-section .testimonial__header {
   color: rgba(107, 66, 125, 0.925);
   text-align: center;
