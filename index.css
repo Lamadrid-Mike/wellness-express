@@ -334,4 +334,13 @@ body {
 }
 .testimonial-section .testimonial__comment-section .testimonial__comment-ratings .checked {
   color: orange;
+}
+.testimonial-section .dots-slides .dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: rgba(107, 66, 125, 0.535);
+  border-radius: 50%;
+  display: inline-block;
 }/*# sourceMappingURL=index.css.map */
