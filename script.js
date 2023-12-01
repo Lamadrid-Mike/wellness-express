@@ -34,5 +34,12 @@ const observer = new IntersectionObserver((entries) => {
 for (let i = 1; i < htmlBody.length - 1; i++) {
   const element = htmlBody[i];
   observer.observe(element);
-  console.log(element);
 }
+
+//Comments slideshow
+let commentSection = document.querySelector(".testimonial__comment-section");
+let commentRating = document.querySelector(
+  ".testimonial__comment-ratings"
+).children;
+
+console.log(commentSection);

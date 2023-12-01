@@ -21,27 +21,40 @@
   background-color: whitesmoke;
   box-shadow: 10px 10px 12px -12px rgba(0, 0, 0, 0.75);
 }
+.testimonial-section .testimonial__comment-section .comment__user-img {
+  grid-column: 1;
+  background: lightblue;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  margin: 1rem;
+}
+.testimonial-section .testimonial__comment-section .comment__user-comment {
+  justify-self: start;
+  grid-column: 2;
+  grid-row: 4;
+}
 .testimonial-section .testimonial__comment-section h3 {
   grid-column: 1/span 3;
 }
 .testimonial-section .testimonial__comment-section p {
   grid-column: 1/span 3;
-  grid-row: 2;
-  margin: 0.5rem;
+  text-align: left;
+  padding: 0.5rem;
 }
 .testimonial-section .testimonial__comment-section .testimonial__comment-user {
-  display: inline-block;
-  grid-column: 1;
+  grid-column: 1/span 3;
   grid-row: 4;
 }
-.testimonial-section .testimonial__comment-section .testimonial__comment-user div {
-  background: lightblue;
-  border-radius: 50%;
-  width: 80px;
-  height: 80px;
+.testimonial-section .testimonial__comment-section .testimonial__comment-ratings {
+  grid-column: 1;
 }
 .testimonial-section .testimonial__comment-section .testimonial__comment-ratings .checked {
   color: orange;
+}
+.testimonial-section .dots-slides {
+  margin-top: 1.5rem;
+  text-align: center;
 }
 .testimonial-section .dots-slides .dot {
   cursor: pointer;

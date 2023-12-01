@@ -1,7 +1,9 @@
 .first-section {
   img {
-    max-width: 100%;
+    width: 80vw;
     margin-bottom: 6rem;
+    display: block;
+    margin: auto;
   }
 
   &__btn {
