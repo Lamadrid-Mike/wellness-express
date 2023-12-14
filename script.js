@@ -67,30 +67,48 @@ const ratingNumber = (number) => {
   }
 };
 
+let testimonialHeader = document.querySelector(
+  ".testimonial__comment-section h3"
+);
+let testimonialParagraph = document.querySelector(
+  ".testimonial__comment-section p"
+);
+let testimonialUser = document.querySelector(".comment__user-comment");
+
 const renderComments = (array) => {
-  for (let i = 0; i < array.length; i++) {
-    const element = array[i];
+  let index = 0;
 
-    const { commentHeader, comment, img, rating, username } = element;
+  setInterval(function () {
+    if (index >= array.length) {
+      index = 0;
+    }
+    const { commentHeader, comment, img, rating, username } = array[index];
+    index++;
 
-    const html = `
-  <div class="testimonial__comment-section">
-    <h3>${commentHeader}</h3>
-    <p>${comment}</p>
-      <div class="testimonial__comment-ratings">
-        <span class="fa fa-star"></span>
-        <span class="fa fa-star"></span>
-        <span class="fa fa-star"></span>
-        <span class="fa fa-star"></span>
-        <span class="fa fa-star"></span>
-      </div>
-    <div src="" alt="" class="comment__user-img"></div>
-  <p class="comment__user-comment">${username}</p>
- </div>
-`;
+    console.log(index);
 
-    commentSection.insertAdjacentHTML("afterend", html);
-  }
+    testimonialHeader.innerHTML = commentHeader;
+    testimonialParagraph.innerHTML = comment;
+    testimonialUser.innerHTML = username;
+    ratingNumber(rating);
+  }, 4000);
+
+  // const html = `
+  //   <div class="testimonial__comment-section">
+  //     <h3>${commentHeader}</h3>
+  //     <p>${comment}</p>
+  //       <div class="testimonial__comment-ratings">
+  //         <span class="fa fa-star"></span>
+  //         <span class="fa fa-star"></span>
+  //         <span class="fa fa-star"></span>
+  //         <span class="fa fa-star"></span>
+  //         <span class="fa fa-star"></span>
+  //       </div>
+  //     <div src="" alt="" class="comment__user-img"></div>
+  //   <p class="comment__user-comment">${username}</p>
+  //  </div>
+  // `;
+  // commentSection.insertAdjacentHTML("afterend", html);
 };
 
 renderComments(comments);
