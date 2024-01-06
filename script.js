@@ -47,7 +47,7 @@ const comments = [
     commentHeader: "Great service",
     comment: "Great support such as time server. highly recommended",
     rating: 4,
-    image: "url",
+    image: "/imgs/user-1.png",
     username: "Yves Tanguy",
   },
 
@@ -55,8 +55,15 @@ const comments = [
     commentHeader: "Love it",
     comment: "Lovely people and great service",
     rating: 5,
-    image: "url",
+    image: "/imgs/user-2.png",
     username: "Lady Barrera",
+  },
+  {
+    commentHeader: "Great people",
+    comment: "I would like to use their services again",
+    rating: 3,
+    image: "/imgs/user-3.png",
+    username: "Mike Lamadrid",
   },
 ];
 
@@ -75,6 +82,8 @@ let testimonialParagraph = document.querySelector(
 );
 let testimonialUser = document.querySelector(".comment__user-comment");
 
+let commentImageSource = document.querySelector(".comment__username-image");
+
 const renderComments = (array) => {
   let index = 0;
 
@@ -82,33 +91,15 @@ const renderComments = (array) => {
     if (index >= array.length) {
       index = 0;
     }
-    const { commentHeader, comment, img, rating, username } = array[index];
+    const { commentHeader, comment, image, rating, username } = array[index];
     index++;
 
-    console.log(index);
-
+    commentImageSource.src = image;
     testimonialHeader.innerHTML = commentHeader;
     testimonialParagraph.innerHTML = comment;
     testimonialUser.innerHTML = username;
     ratingNumber(rating);
   }, 4000);
-
-  // const html = `
-  //   <div class="testimonial__comment-section">
-  //     <h3>${commentHeader}</h3>
-  //     <p>${comment}</p>
-  //       <div class="testimonial__comment-ratings">
-  //         <span class="fa fa-star"></span>
-  //         <span class="fa fa-star"></span>
-  //         <span class="fa fa-star"></span>
-  //         <span class="fa fa-star"></span>
-  //         <span class="fa fa-star"></span>
-  //       </div>
-  //     <div src="" alt="" class="comment__user-img"></div>
-  //   <p class="comment__user-comment">${username}</p>
-  //  </div>
-  // `;
-  // commentSection.insertAdjacentHTML("afterend", html);
 };
 
 renderComments(comments);
