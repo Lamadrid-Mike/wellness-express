@@ -12,7 +12,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="/index.css" />
     <script defer src="/script.js"></script>
     <title>Wellness Express</title>
   </head>
@@ -113,7 +113,7 @@
         <h2 class="form__h2--purple">Request a callback!</h2>
         <h3 class="form__h3--black">We will contact you back shortly</h3>
       </div>
-      <form class="form">
+      <form class="form" id="form">
         <input
           type="text"
           id="first-name"
@@ -155,7 +155,7 @@
               alt="map icon"
               class="contact-section__address--icon"
             />
-            <a href="tel:123-456-7890">123-456-7890</a>
+            <a href="tel:123-456-7890">Monday-Friday: 10am-10pm</a>
           </div>
           <div class="address__section-content">
             <img
@@ -166,6 +166,21 @@
             <a href="mailto: abc@example.com">sample@hotmail.com</a>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="subscribe__section">
+      <div class="subscribe__header">
+        <h2>Get an update every week</h2>
+        <p>
+          We ensure that your product is delivered in the safest possible
+          manner, at the correct location, at the right time.
+        </p>
+        <h2>Subscribe to newsletter</h2>
+        <form action="" class="subscribe__email-input">
+          <input type="email" name="email" />
+          <button type="submit">Subscribe</button>
+        </form>
       </div>
     </section>
     <footer class="webpage-footer"></footer>

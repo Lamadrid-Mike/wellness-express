@@ -2,12 +2,24 @@ let mobileBtn = document.querySelector(".open__mobile--navigation");
 let mobileNavbar = document.querySelector(".navigation");
 let closeBtnMobile = document.querySelector(".navigation__close--btn");
 let htmlBody = document.querySelector("body").children;
-
-//Hamburger mobile menu effect!
+let testimonialHeader = document.querySelector(
+  ".testimonial__comment-section h3"
+);
+let testimonialParagraph = document.querySelector(
+  ".testimonial__comment-section p"
+);
+let testimonialUser = document.querySelector(".comment__user-comment");
+let commentImageSource = document.querySelector(".comment__username-image");
 let anchorLinks = Array.from(
   document.querySelectorAll(".navigation__overlay--content a")
 );
+let commentSection = document.querySelector(".testimonial__comment-section");
+let commentRating = document.querySelector(
+  ".testimonial__comment-ratings"
+).children;
+let form = document.querySelector(".form");
 
+//Hamburger mobile menu effect!
 mobileBtn.addEventListener("click", function () {
   mobileNavbar.style.width = "0%";
   anchorLinks.forEach((el) => (el.style.opacity = "1"));
@@ -37,11 +49,6 @@ for (let i = 1; i < htmlBody.length - 1; i++) {
 }
 
 //Comments slideshow
-let commentSection = document.querySelector(".testimonial__comment-section");
-let commentRating = document.querySelector(
-  ".testimonial__comment-ratings"
-).children;
-
 const comments = [
   {
     commentHeader: "Great service",
@@ -74,32 +81,42 @@ const ratingNumber = (number) => {
   }
 };
 
-let testimonialHeader = document.querySelector(
-  ".testimonial__comment-section h3"
-);
-let testimonialParagraph = document.querySelector(
-  ".testimonial__comment-section p"
-);
-let testimonialUser = document.querySelector(".comment__user-comment");
-
-let commentImageSource = document.querySelector(".comment__username-image");
+const removeEffectTimer = (seconds) => {
+  setTimeout(function () {
+    commentImageSource.classList.remove("fade-in-animation");
+  }, seconds);
+};
 
 const renderComments = (array) => {
   let index = 0;
-
   setInterval(function () {
     if (index >= array.length) {
       index = 0;
     }
     const { commentHeader, comment, image, rating, username } = array[index];
     index++;
-
+    commentImageSource.classList.add("fade-in-animation");
+    removeEffectTimer(4000);
     commentImageSource.src = image;
     testimonialHeader.innerHTML = commentHeader;
     testimonialParagraph.innerHTML = comment;
     testimonialUser.innerHTML = username;
     ratingNumber(rating);
-  }, 4000);
+  }, 5000);
 };
 
 renderComments(comments);
+
+//Handle the form!
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  var jsonData = {};
+  var formData = new FormData(event.target);
+
+  formData.forEach((value, key) => {
+    jsonData[key] = value;
+  });
+
+  console.log(jsonData);
+});

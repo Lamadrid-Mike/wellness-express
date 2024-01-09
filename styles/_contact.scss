@@ -23,6 +23,9 @@
 
   &__address {
     .address__section-content {
+      display: flex;
+      gap: 15px;
+
       img {
         filter: invert(30%) sepia(14%) saturate(2032%) hue-rotate(237deg)
           brightness(92%) contrast(88%);
